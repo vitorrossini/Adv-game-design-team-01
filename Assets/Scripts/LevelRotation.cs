@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelRotation : MonoBehaviour
 {
     public float degreesPerSecond = 30;
+    public Transform pivot;
    
 
     // Start is called before the first frame update
@@ -28,6 +29,6 @@ public class LevelRotation : MonoBehaviour
 
     public void RotateLevel()
     {
-        transform.Rotate(new Vector3 (0,0,degreesPerSecond) * Time.deltaTime);
+        transform.RotateAround(pivot.position, Vector3.forward, degreesPerSecond);
     }
 }
