@@ -933,6 +933,7 @@ GameObject:
   - component: {fileID: 118302100}
   - component: {fileID: 118302099}
   - component: {fileID: 118302098}
+  - component: {fileID: 118302101}
   m_Layer: 3
   m_Name: plats (2)
   m_TagString: Untagged
@@ -1033,6 +1034,20 @@ Transform:
   m_Father: {fileID: 1379401412}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118302101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118302097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402e8f7b9c2ad494ca7b8f76f63ce7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  limitDistance: 2
 --- !u!1 &146165163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,6 +1325,7 @@ GameObject:
   - component: {fileID: 231991888}
   - component: {fileID: 231991887}
   - component: {fileID: 231991886}
+  - component: {fileID: 231991889}
   m_Layer: 3
   m_Name: plats
   m_TagString: Untagged
@@ -1410,6 +1426,20 @@ Transform:
   m_Father: {fileID: 1379401412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &231991889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231991885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402e8f7b9c2ad494ca7b8f76f63ce7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  limitDistance: 2
 --- !u!1 &363904732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,6 +3242,7 @@ GameObject:
   - component: {fileID: 781454743}
   - component: {fileID: 781454742}
   - component: {fileID: 781454741}
+  - component: {fileID: 781454744}
   m_Layer: 3
   m_Name: plats (1)
   m_TagString: Untagged
@@ -3312,6 +3343,20 @@ Transform:
   m_Father: {fileID: 1379401412}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781454744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781454740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402e8f7b9c2ad494ca7b8f76f63ce7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  limitDistance: 2
 --- !u!1 &847673528
 GameObject:
   m_ObjectHideFlags: 0
@@ -5898,7 +5943,7 @@ GameObject:
   - component: {fileID: 1379401412}
   m_Layer: 0
   m_Name: platforms
-  m_TagString: Untagged
+  m_TagString: Plt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
