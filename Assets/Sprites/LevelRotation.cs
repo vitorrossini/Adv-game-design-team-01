@@ -5,11 +5,12 @@ using UnityEngine;
 public class LevelRotation : MonoBehaviour
 {
     public float degreesPerSecond = 30;
-    
+   
+
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -19,6 +20,10 @@ public class LevelRotation : MonoBehaviour
         {
             RotateLevel();
         }
+
+       
+        
+
     }
 
     public void RotateLevel()
