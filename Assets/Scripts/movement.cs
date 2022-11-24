@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+    
     public float moveSpeed;
     public float jumpForce;
 
@@ -26,8 +27,11 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        Jump();
+        if (!Input.GetKeyDown(KeyCode.B))
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+            Jump();
+        }
 
     }
 
@@ -83,4 +87,6 @@ public class movement : MonoBehaviour
             jumpsLeft = jumpsAmount;// jumpsAmount =2;
         }
     }
+
+   
 }

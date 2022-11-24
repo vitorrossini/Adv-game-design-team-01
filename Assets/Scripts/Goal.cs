@@ -5,11 +5,14 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
 
-    public GameObject Win;
-    private void OnCollisionEnter2D(Collision2D collision)
+   [SerializeField] public GameObject Win;
+   
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Time.timeScale = 0f;
-        Win.SetActive(true);
-
+        if(collision.gameObject.CompareTag("wave"))
+        {
+            Time.timeScale = 0f;
+            Win.SetActive(true);
+        }
     }
 }
