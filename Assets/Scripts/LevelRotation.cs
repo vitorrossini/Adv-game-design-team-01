@@ -4,25 +4,41 @@ using UnityEngine;
 
 public class LevelRotation : MonoBehaviour
 {
-
-    private float rotationZ;
+    
+    public float rotationZ;
     public float speed = 1f;
     
    
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
-        if (Input.GetKey(KeyCode.B) )
+        
+        
+        
+           TurnIt();
+        
+       
+
+       
+        
+
+    }
+
+   
+   public void TurnIt()
+    {
+        if (Input.GetKey(KeyCode.B))
         {
-            
+            Debug.LogError("yeah you can turn");
+
             rotationZ -= Input.GetAxis("Horizontal") * speed * Time.deltaTime;
             rotationZ = Mathf.Clamp(rotationZ, -90, 90);
 
@@ -30,12 +46,11 @@ public class LevelRotation : MonoBehaviour
 
         }
 
-       
-        
-
     }
-
-    
-
    
+
+
+
+
+
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plt
   - wave
+  - CanTurn
   layers:
   - Default
   - TransparentFX

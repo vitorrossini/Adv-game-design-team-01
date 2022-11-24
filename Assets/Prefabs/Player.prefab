@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8772114462970170116}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e944e8ae815b84448469dc731053c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guitarWave: {fileID: 0}
   timer: 0
   canWave: 0
 --- !u!114 &8772114462970170116
@@ -163,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3524f9873bfda274fac98a281e466a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvlRot: {fileID: 0}
   moveSpeed: 5
   jumpForce: 10
   jumpsAmount: 1
@@ -170,6 +170,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
+  canTurn: 0
+  moveInput: 0
 --- !u!1 &8772114463795883040
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    
+    public LevelRotation lvlRot;
     public float moveSpeed;
     public float jumpForce;
 
@@ -13,25 +13,26 @@ public class movement : MonoBehaviour
     public LayerMask GroundLayer;
 
     bool isGrounded;
+    public bool canTurn;
 
-    float moveInput;
+    public float moveInput;
     Rigidbody2D rb2d;
     float scaleX;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        lvlRot = gameObject.GetComponent<LevelRotation>();
         scaleX = transform.localScale.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.B))
-        {
+       
             moveInput = Input.GetAxisRaw("Horizontal");
             Jump();
-        }
+        
 
     }
 
@@ -88,5 +89,16 @@ public class movement : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.CompareTag("CanTurn"))
+        {
+            moveSpeed = 0;
+
+        }
+    }
+
+
+
+
 }
