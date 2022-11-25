@@ -4,26 +4,35 @@ using UnityEngine;
 
 public class Inputs : MonoBehaviour
 {
-   // [SerializeField] private GameObject guitarWave;
+    // THIS SCRIPT DOES NOT WORK AND I DONT KNOW WHY
+
+    private GameObject guitarWave;
     public float timer = 0;
     public bool canWave;
-    private LevelRotation lvlrot;
     // Start is called before the first frame update
     void Start()
     {
-       // guitarWave.SetActive(false);
-        canWave = true;
+
+        guitarWave = GameObject.Find("wave").GetComponent<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-      
-
-
-     /*   if (Input.GetKey(KeyCode.E) && canWave)
+        if(Input.GetKey(KeyCode.E) && canWave)
         {
+            GuitarWave();
+
+        }
+
+
+
+    }
+
+
+    public void GuitarWave()
+    {
+        
             guitarWave.SetActive(true);
 
             timer += Time.deltaTime;
@@ -40,13 +49,11 @@ public class Inputs : MonoBehaviour
                 ResetTimer();
 
             }
-        }
-        */
-       
+        
+
     }
 
 
-    
     public void ResetTimer()
     {
         timer = 0f;
