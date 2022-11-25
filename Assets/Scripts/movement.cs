@@ -5,6 +5,7 @@ public class movement : MonoBehaviour
 {
     public LevelRotation lvlRot;
     public float moveSpeed;
+    private float breakSpeed;
     public float jumpForce;
 
     public int jumpsAmount;
@@ -13,7 +14,7 @@ public class movement : MonoBehaviour
     public LayerMask GroundLayer;
 
     bool isGrounded;
-    public bool canTurn;
+    public bool onTurnPlat;
 
     public float moveInput;
     Rigidbody2D rb2d;
@@ -24,14 +25,28 @@ public class movement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         lvlRot = gameObject.GetComponent<LevelRotation>();
         scaleX = transform.localScale.x;
+        breakSpeed = 1f;
+        onTurnPlat = false;
     }
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
        
             moveInput = Input.GetAxisRaw("Horizontal");
             Jump();
+
+        if (onTurnPlat && Input.GetKey(KeyCode.B))
+        {
+
+            breakSpeed = 0;
+            Debug.LogError("woow");
+        }
+        else
+        {
+            breakSpeed = 1f;
+        }
+        
         
 
     }
@@ -44,7 +59,7 @@ public class movement : MonoBehaviour
     public void Move()
     {
         Flip();
-        rb2d.velocity = new Vector2(moveInput * moveSpeed, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(moveInput * moveSpeed * breakSpeed, rb2d.velocity.y);
     }
 
     public void Flip()
@@ -89,12 +104,17 @@ public class movement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("CanTurn"))
+        if (collision.gameObject.CompareTag("CanTurn"))
         {
-            moveSpeed = 0;
-
+            onTurnPlat = true;
+            Debug.LogError("woow");
+        }
+        else
+        {
+            
+            onTurnPlat = false;
         }
     }
 
