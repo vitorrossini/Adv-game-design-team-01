@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8772114462970170122}
   - component: {fileID: 8772114462970170117}
   - component: {fileID: 8772114462970170116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e944e8ae815b84448469dc731053c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  canWave: 0
+  wavePrefab: {fileID: 0}
+  playerPosition: {fileID: 0}
 --- !u!114 &8772114462970170116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8772114463795883041}
   - component: {fileID: 8772114463795883046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground check
   m_TagString: Untagged
   m_Icon: {fileID: 0}

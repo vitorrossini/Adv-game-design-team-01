@@ -19,10 +19,8 @@ public class Inputs : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.LogError("button pressed and ready to wave");
             GameObject newWave = Instantiate(wavePrefab);
             newWave.transform.position = playerPosition.position;
-           // newWave.GetComponent<Wave>().Initialize(playerPosition.position);
         }
 
 

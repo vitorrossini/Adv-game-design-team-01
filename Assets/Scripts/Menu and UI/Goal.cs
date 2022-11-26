@@ -9,8 +9,10 @@ public class Goal : MonoBehaviour
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("wave"))
+        
+        if(collision.gameObject.layer == 7)
         {
+            Debug.LogError("Collided");
             Time.timeScale = 0f;
             Win.SetActive(true);
         }
