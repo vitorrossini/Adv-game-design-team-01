@@ -3961,7 +3961,7 @@ GameObject:
   - component: {fileID: 1899015534}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4026,7 +4026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899015529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: 2.92, z: 0}
+  m_LocalPosition: {x: 4.775, y: 2.92, z: 0}
   m_LocalScale: {x: 0.39012, y: 0.39012, z: 0.39012}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4059,9 +4059,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005212427, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.26544875
 --- !u!1 &1952229783
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +4483,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: wavePrefab
+      value: 
+      objectReference: {fileID: 7935897265600596552, guid: d650c6dbe8b8ddf4389dd2bc2e571dea, type: 3}
+    - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 291787179}
     - target: {fileID: 8772114462970170119, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: m_Name
       value: Player

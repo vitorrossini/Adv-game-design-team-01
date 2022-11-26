@@ -4,60 +4,30 @@ using UnityEngine;
 
 public class Inputs : MonoBehaviour
 {
-    // THIS SCRIPT DOES NOT WORK AND I DONT KNOW WHY
-
-    private GameObject guitarWave;
-    public float timer = 0;
-    public bool canWave;
+    [SerializeField] private GameObject wavePrefab;
+    [SerializeField] private Transform playerPosition;
     // Start is called before the first frame update
     void Start()
     {
-
-        guitarWave = GameObject.Find("wave").GetComponent<GameObject>();
+        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.E) && canWave)
-        {
-            GuitarWave();
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.LogError("button pressed and ready to wave");
+            GameObject newWave = Instantiate(wavePrefab);
+            newWave.transform.position = playerPosition.position;
+           // newWave.GetComponent<Wave>().Initialize(playerPosition.position);
         }
 
 
 
-    }
-
-
-    public void GuitarWave()
-    {
-        
-            guitarWave.SetActive(true);
-
-            timer += Time.deltaTime;
-            canWave = false;
-            if (timer >= 1f)
-            {
-                guitarWave.SetActive(false);
-
-            }
-
-            else if (timer >= 2f)
-            {
-                canWave = true;
-                ResetTimer();
-
-            }
-        
 
     }
-
-
-    public void ResetTimer()
-    {
-        timer = 0f;
-    }
-
 
 }
