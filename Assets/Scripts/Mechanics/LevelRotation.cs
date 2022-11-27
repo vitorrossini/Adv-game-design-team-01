@@ -7,6 +7,7 @@ public class LevelRotation : MonoBehaviour
     
     public float rotationZ;
     public float speed = 1f;
+    [SerializeField] public GameObject chunkToRotate;
 
     private movement _movement;
     
@@ -16,6 +17,7 @@ public class LevelRotation : MonoBehaviour
     public void Start()
     {
         _movement = GameObject.Find("Player").GetComponent<movement>();
+        rotationZ = chunkToRotate.transform.rotation.z;
     }
 
     // Update is called once per frame
