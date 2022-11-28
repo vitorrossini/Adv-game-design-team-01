@@ -7,14 +7,14 @@ public class LevelRotation : MonoBehaviour
     
     public float rotationZ;
     public float speed = 1f;
-    private movement _movement;
+    private Movement movement;
     
    
 
     // Start is called before the first frame update
     public void Start()
     {
-        _movement = GameObject.Find("Player").GetComponent<movement>();
+        movement = GameObject.Find("Player").GetComponent<Movement>();
         rotationZ = gameObject.transform.rotation.z;
         
     }
@@ -38,7 +38,7 @@ public class LevelRotation : MonoBehaviour
    
    public void TurnIt()
     {
-        if (Input.GetKey(KeyCode.B) && _movement.GetComponent<movement>().onTurnPlat == true)
+        if (Input.GetKey(KeyCode.B) && movement.GetComponent<Movement>().onTurnPlat == true)
         {
             
             Debug.LogError("yeah you can turn");

@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     public LevelRotation lvlRot;
     public float moveSpeed;
@@ -9,11 +9,11 @@ public class movement : MonoBehaviour
     public float jumpForce;
 
     public int jumpsAmount;
-    int jumpsLeft;
+   private  int jumpsLeft;
     public Transform GroundCheck;
     public LayerMask GroundLayer;
 
-    bool isGrounded;
+    private bool isGrounded;
     public bool onTurnPlat;
 
     public float moveInput;

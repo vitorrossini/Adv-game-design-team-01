@@ -17,6 +17,7 @@ public class DoorButton : MonoBehaviour
         if(canOpenDoor)
         {
             Destroy(door);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
 
