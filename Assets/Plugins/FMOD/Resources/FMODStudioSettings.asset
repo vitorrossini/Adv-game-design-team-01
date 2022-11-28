@@ -560,8 +560,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../FMOD Studio/Music for Alien/Music for Alien.fspro
-  sourceBankPath: ../../FMOD Studio/Music for Alien/Build
+  sourceProjectPath: Assets/Music/Music for Alien/Music for Alien.fspro
+  sourceBankPath: Assets/Music/Music for Alien/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

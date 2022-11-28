@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{43642a5f-d545-46b0-b7ed-f389c8a4d47e}">
+		<property name="assetPath">
+			<value>Background Synths.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>35.55554166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3bddbb3-2deb-4fa2-ba0b-de8a10298159}</destination>
+		</relationship>
+	</object>
+</objects>
