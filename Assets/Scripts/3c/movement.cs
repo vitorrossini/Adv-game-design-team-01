@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public ParametersSetByName music;
     public LevelRotation lvlRot;
     public float moveSpeed;
     private float breakSpeed;
@@ -108,6 +109,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("CanTurn"))
         {
             onTurnPlat = true;
+            music.RotatePiano1();
             Debug.LogError("woow");
         }
         else

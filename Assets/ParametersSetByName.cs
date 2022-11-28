@@ -3,23 +3,23 @@ using UnityEngine;
 public class ParametersSetByName : MonoBehaviour
 {
     public float speed = 10f;
-    private FMOD.Studio.EventInstance Music;
+    public  FMOD.Studio.EventInstance Music;
 
-    void Start()
+   public  void Start()
     {
         Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
         Music.start();
     }
 
-    void Update()
+    public void Update()
     {
         if (Input.GetKeyDown("a"))
         {
-            Music.setParameterByName("Piano", 1f * speed * Time.deltaTime);
+            
         }
         if (Input.GetKeyUp("a"))
         {
-            Music.setParameterByName("Piano", 2f * speed * Time.deltaTime);
+            
         }
         
         if (Input.GetKeyDown("w"))
@@ -48,5 +48,22 @@ public class ParametersSetByName : MonoBehaviour
         {
             Music.setParameterByName("Guitar", 2f);
         }
+    }
+
+    public void RotatePiano1()
+    {
+        Music.setParameterByName("Piano", 1f);
+
+        /* if (something)
+         * {
+         * Music.setParameterByName("Piano", 2f);
+         * }*/
+
+    }
+    public void RotatePiano2()
+    {
+        
+          Music.setParameterByName("Piano", 2f);
+         
     }
 }
