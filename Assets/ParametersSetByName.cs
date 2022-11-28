@@ -33,11 +33,11 @@ public class ParametersSetByName : MonoBehaviour
         
         if (Input.GetKeyDown("d"))
         {
-            Music.setParameterByName("Drums", 1f);
+            
         }
         if (Input.GetKeyUp("d"))
         {
-            Music.setParameterByName("Drums", 2f);
+           
         }
         
         if (Input.GetKeyDown("s"))
@@ -50,7 +50,7 @@ public class ParametersSetByName : MonoBehaviour
         }
     }
 
-    public void RotatePiano1()
+    public void LevitatePiano1()
     {
         Music.setParameterByName("Piano", 1f);
 
@@ -60,10 +60,23 @@ public class ParametersSetByName : MonoBehaviour
          * }*/
 
     }
-    public void RotatePiano2()
+    public void LevitatePiano2()
     {
         
           Music.setParameterByName("Piano", 2f);
          
     }
+
+
+    public void RotateDrums1()
+    {
+        Music.setParameterByName("Drums", 1f);
+    }
+
+    public void RotateDrums2()
+    {
+        Music.setParameterByName("Drums", 2f);
+    }
+
+
 }

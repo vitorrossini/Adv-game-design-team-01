@@ -6,6 +6,7 @@ public class MovePlatforms : MonoBehaviour
 {
     public float speed;
     float originalPos;
+    public ParametersSetByName music;
     [SerializeField] public float limitDistance = 2f;
     
 
@@ -25,6 +26,7 @@ public class MovePlatforms : MonoBehaviour
         if (Input.GetButton("Platform"))
         {
 
+            music.LevitatePiano1();
             transform.Translate(direction * speed * Time.deltaTime);
 
             if (transform.position.y <= (originalPos -limitDistance))
@@ -35,6 +37,10 @@ public class MovePlatforms : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, (originalPos + limitDistance) , transform.position.z);
             }
+        }
+        else
+        {
+            music.LevitatePiano2();
         }
     }
 

@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            
+            music.RotatePiano2();
             onTurnPlat = false;
         }
     }
