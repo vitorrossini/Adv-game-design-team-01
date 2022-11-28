@@ -22,7 +22,7 @@ public class MovePlatforms : MonoBehaviour
 
         Vector3 direction = new Vector3(0, verticalInput, 0);
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetButton("Platform"))
         {
 
             transform.Translate(direction * speed * Time.deltaTime);

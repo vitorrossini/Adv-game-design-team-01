@@ -36,11 +36,10 @@ public class Movement : MonoBehaviour
             moveInput = Input.GetAxisRaw("Horizontal");
             Jump();
 
-        if (onTurnPlat && Input.GetKey(KeyCode.B))
+        if (onTurnPlat && Input.GetButton("Rotate"))
         {
 
             breakSpeed = 0;
-            Debug.LogError("woow");
         }
         else
         {
@@ -77,7 +76,7 @@ public class Movement : MonoBehaviour
     public void Jump()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             CheckIfGrounded();
             if (jumpsLeft > 0)

@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject pauseFirstButton;
     
 
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
 
             if (gameIsPaused)
@@ -44,6 +46,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         gameIsPaused = true;
         Cursor.visible = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+
 
 
     }

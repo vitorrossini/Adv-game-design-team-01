@@ -16,8 +16,8 @@ public class Inputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+        
+        if (Input.GetButtonDown("Guitar"))
         {
             GameObject newWave = Instantiate(wavePrefab);
             newWave.transform.position = playerPosition.position;
@@ -27,5 +27,6 @@ public class Inputs : MonoBehaviour
 
 
     }
+
 
 }

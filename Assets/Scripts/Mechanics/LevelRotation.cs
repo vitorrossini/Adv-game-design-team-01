@@ -38,7 +38,7 @@ public class LevelRotation : MonoBehaviour
    
    public void TurnIt()
     {
-        if (Input.GetKey(KeyCode.B) && movement.GetComponent<Movement>().onTurnPlat == true)
+        if (Input.GetButton("Rotate") && movement.GetComponent<Movement>().onTurnPlat == true)
         {
             
             Debug.LogError("yeah you can turn");
