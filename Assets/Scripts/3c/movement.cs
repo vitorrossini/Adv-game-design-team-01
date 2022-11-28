@@ -109,12 +109,12 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("CanTurn"))
         {
             onTurnPlat = true;
-            music.RotatePiano1();
+            music.RotateDrums1();
             Debug.LogError("woow");
         }
         else
         {
-            music.RotatePiano2();
+            music.RotateDrums2();
             onTurnPlat = false;
         }
     }

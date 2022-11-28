@@ -1,38 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelRotation : MonoBehaviour
 {
-    
     public float rotationZ;
     public float speed = 1f;
     private Movement movement;
-    
-   
 
-    // Start is called before the first frame update
     public void Start()
     {
         movement = GameObject.Find("Player").GetComponent<Movement>();
         rotationZ = gameObject.transform.rotation.z;
-        
     }
-
-    // Update is called once per frame
+    
     public void Update()
     {
-
-
-        
-        
-           TurnIt();
-        
-       
-
-       
-        
-
+        TurnIt();
     }
 
    
