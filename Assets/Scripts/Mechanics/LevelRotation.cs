@@ -4,11 +4,11 @@ public class LevelRotation : MonoBehaviour
 {
     public float rotationZ;
     public float speed = 1f;
-    private Movement movement;
+    private PlayerMovement movement;
 
     public void Start()
     {
-        movement = GameObject.Find("Player").GetComponent<Movement>();
+        movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         rotationZ = gameObject.transform.rotation.z;
     }
     
@@ -20,7 +20,7 @@ public class LevelRotation : MonoBehaviour
    
    public void TurnIt()
     {
-        if (Input.GetButton("Rotate") && movement.GetComponent<Movement>().onTurnPlat == true)
+        if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
         {
             
             Debug.LogError("yeah you can turn");

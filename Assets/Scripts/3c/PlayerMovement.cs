@@ -1,7 +1,8 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public ParametersSetByName music;
     public LevelRotation lvlRot;
@@ -10,7 +11,7 @@ public class Movement : MonoBehaviour
     public float jumpForce;
 
     public int jumpsAmount;
-   private  int jumpsLeft;
+    private int jumpsLeft;
     public Transform GroundCheck;
     public LayerMask GroundLayer;
 
@@ -31,11 +32,11 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-   public void Update()
+    public void Update()
     {
-       
-            moveInput = Input.GetAxisRaw("Horizontal");
-            Jump();
+
+        moveInput = Input.GetAxisRaw("Horizontal");
+        Jump();
 
         if (onTurnPlat && Input.GetButton("Rotate"))
         {
@@ -46,8 +47,8 @@ public class Movement : MonoBehaviour
         {
             breakSpeed = 1f;
         }
-        
-        
+
+
 
     }
 
@@ -118,8 +119,4 @@ public class Movement : MonoBehaviour
             onTurnPlat = false;
         }
     }
-
-
-
-
 }
