@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float musicTransition = 1f;
-    public float musicTrack = 2f;
+    public float addValue;
+    public float subtractValue;
+    public float musicTrack;
     public ParametersSetByName music;
     public LevelRotation lvlRot;
     public float moveSpeed;
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         CheckIfGrounded();
+        PlayDrums();
 
     }
 
@@ -119,13 +121,40 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("CanTurn"))
         {
             onTurnPlat = true;
-            music.RotateDrums(musicTrack - musicTransition);
+           // music.RotateDrums(musicTrack - musicTransition);
             Debug.LogError("woow");
         }
         else
         {
-            music.RotateDrums(musicTrack + musicTransition);
+           // music.RotateDrums(musicTrack + musicTransition);
             onTurnPlat = false;
         }
+    }
+
+    public void PlayDrums()
+
+    {
+        if (musicTrack <= 1f)
+        {
+            musicTrack = 1f;
+        }
+        if (musicTrack >= 2f)
+        {
+            musicTrack = 2f;
+        }
+
+        if (onTurnPlat)
+        {
+            musicTrack += subtractValue * Time.deltaTime;
+
+        }
+
+        else
+        {
+            musicTrack += addValue * Time.deltaTime;
+
+        }
+        
+        music.RotateDrums(musicTrack);
     }
 }

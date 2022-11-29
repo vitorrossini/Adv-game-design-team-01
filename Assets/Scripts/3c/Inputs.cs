@@ -48,7 +48,7 @@ public class Inputs : MonoBehaviour
 
         if (timer > 2f)
         { 
-            music.UseGuitar(musicTrack   + musicTransition);
+            music.UseGuitar(musicTrack + musicTransition);
             timer = 0;
             triggerrr = false;
         }

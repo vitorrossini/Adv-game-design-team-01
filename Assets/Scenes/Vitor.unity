@@ -9065,12 +9065,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: addValue
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: musicTrack
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: subtractValue
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: musicTransition
-      value: 0.5
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: transitionSpeed
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8136673188963013921, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: Win

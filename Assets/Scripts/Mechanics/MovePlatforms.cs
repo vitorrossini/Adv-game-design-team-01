@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MovePlatforms : MonoBehaviour
 {
-    public float musicTransition = 1f;
+    public float addValue = 1.2f;
+    public float subtractValue = -1.2f;
+    public bool play;
     public float musicTrack = 2f;
     public float speed;
     float originalPos;
@@ -16,19 +18,22 @@ public class MovePlatforms : MonoBehaviour
     void Start()
     {
         originalPos = transform.position.y;
+        play = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayPiano();
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(0, verticalInput, 0);
 
         if (Input.GetButton("Platform"))
         {
+            play = true;
 
-            music.LevitatePiano(musicTrack - musicTransition);
+            
             transform.Translate(direction * speed * Time.deltaTime);
 
             if (transform.position.y <= (originalPos -limitDistance))
@@ -42,11 +47,37 @@ public class MovePlatforms : MonoBehaviour
         }
         else
         {
-            music.LevitatePiano(musicTrack  + musicTransition);
+            play = false;
+            
         }
     }
 
-       
+       void PlayPiano()
+    {
+        if (musicTrack <= 1f)
+        {
+            musicTrack = 1f;
+        }
+        if (musicTrack >= 2f)
+        {
+            musicTrack = 2f;
+        }
+
+        if (play)
+        {
+
+            musicTrack += subtractValue * Time.deltaTime;
+
+        }
+
+        else
+        {
+            musicTrack += addValue * Time.deltaTime;
+        }
+
+        music.LevitatePiano(musicTrack);
+
+    }
 
 
 }
