@@ -187,12 +187,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: limitDistance
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -479,8 +483,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -628,8 +636,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -7493,8 +7505,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -7681,8 +7697,12 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -7937,8 +7957,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -8437,8 +8461,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -9037,8 +9065,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673887856}
     - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8136673188963013921, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: Win
@@ -9061,6 +9093,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: musicTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: wavePrefab
       value: 
       objectReference: {fileID: 7935897265600596552, guid: d650c6dbe8b8ddf4389dd2bc2e571dea, type: 3}
@@ -9070,7 +9106,7 @@ PrefabInstance:
       objectReference: {fileID: 291787179}
     - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: musicTransition
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8772114462970170119, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: m_Name
