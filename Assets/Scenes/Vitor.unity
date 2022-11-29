@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: limitDistance
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1 &208344538 stripped
@@ -474,6 +478,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1 &812643613
@@ -619,6 +627,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1 &823397408
@@ -7480,6 +7492,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1 &1349820058
@@ -7663,6 +7679,10 @@ PrefabInstance:
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: speed
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
@@ -7916,6 +7936,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1 &1703910866
@@ -8412,6 +8436,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1001 &2759958756556628046
@@ -9008,6 +9036,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1673887856}
+    - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8136673188963013921, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: Win
       value: 
@@ -9036,6 +9068,10 @@ PrefabInstance:
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 291787179}
+    - target: {fileID: 8772114462970170117, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
+      propertyPath: musicTransition
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8772114462970170119, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: m_Name
       value: Player

@@ -3,6 +3,8 @@ using UnityEngine;
 public class Inputs : MonoBehaviour
 {
     public ParametersSetByName music;
+    public float musicTransition = 1f;
+    public float musicTrack = 2f;
     [SerializeField] private GameObject wavePrefab;
     [SerializeField] private Transform playerPosition;
     public float timer;
@@ -27,7 +29,7 @@ public class Inputs : MonoBehaviour
         {
             PlayGuitar();
         }
-        music.UseGuitar2();
+       
         
     }
 
@@ -41,12 +43,12 @@ public class Inputs : MonoBehaviour
         timer += Time.deltaTime;
         if (timer <= 2f)
         {
-            music.UseGuitar1();
+            music.UseGuitar(musicTrack - musicTransition);
         }
 
         if (timer > 2f)
         {
-            music.UseGuitar2();
+            music.UseGuitar(musicTrack  + musicTransition);
             timer = 0;
             triggerrr = false;
         }

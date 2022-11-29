@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovePlatforms : MonoBehaviour
 {
+    public float musicTransition = 1f;
+    public float musicTrack = 2f;
     public float speed;
     float originalPos;
     public ParametersSetByName music;
@@ -26,7 +28,7 @@ public class MovePlatforms : MonoBehaviour
         if (Input.GetButton("Platform"))
         {
 
-            music.LevitatePiano(1f);
+            music.LevitatePiano(musicTrack - musicTransition);
             transform.Translate(direction * speed * Time.deltaTime);
 
             if (transform.position.y <= (originalPos -limitDistance))
@@ -40,7 +42,7 @@ public class MovePlatforms : MonoBehaviour
         }
         else
         {
-            music.LevitatePiano(2f);
+            music.LevitatePiano(musicTrack  + musicTransition);
         }
     }
 

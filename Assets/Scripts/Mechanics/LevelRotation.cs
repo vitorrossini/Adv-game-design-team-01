@@ -21,7 +21,7 @@ public class LevelRotation : MonoBehaviour
    
    public void TurnIt()
     {
-        if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true && movement.GetComponent<PlayerMovement>().isGrounded)
+        if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
         {
             
             Debug.LogError("yeah you can turn");

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float musicTransition = 1f;
+    public float musicTrack = 2f;
     public ParametersSetByName music;
     public LevelRotation lvlRot;
     public float moveSpeed;
     private float breakSpeed;
     public float jumpForce;
+   
 
     public int jumpsAmount;
     private int jumpsLeft;
@@ -111,12 +114,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("CanTurn"))
         {
             onTurnPlat = true;
-            music.RotateDrums1();
+            music.RotateDrums(musicTrack - musicTransition);
             Debug.LogError("woow");
         }
         else
         {
-            music.RotateDrums2();
+            music.RotateDrums(musicTrack + musicTransition);
             onTurnPlat = false;
         }
     }
