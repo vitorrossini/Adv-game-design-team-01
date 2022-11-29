@@ -27,6 +27,7 @@ public class Inputs : MonoBehaviour
         {
             PlayGuitar();
         }
+        music.UseGuitar2();
         
     }
 

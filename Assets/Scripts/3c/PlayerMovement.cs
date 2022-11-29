@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform GroundCheck;
     public LayerMask GroundLayer;
 
-    private bool isGrounded;
+    public bool isGrounded;
     public bool onTurnPlat;
 
     public float moveInput;
@@ -93,7 +93,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void CheckIfGrounded()
     {
-        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer);
+        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer); // change this so it doesnt change only when you collide again
+        
         ResetJumps();
     }
 

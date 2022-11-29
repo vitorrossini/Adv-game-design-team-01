@@ -5,6 +5,7 @@ public class LevelRotation : MonoBehaviour
     public float rotationZ;
     public float speed = 1f;
     private PlayerMovement movement;
+   
 
     public void Start()
     {
@@ -20,13 +21,13 @@ public class LevelRotation : MonoBehaviour
    
    public void TurnIt()
     {
-        if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
+        if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true && movement.GetComponent<PlayerMovement>().isGrounded)
         {
             
             Debug.LogError("yeah you can turn");
 
 
-
+            
             rotationZ -= Input.GetAxis("Horizontal") * speed * Time.deltaTime;
             rotationZ = Mathf.Clamp(rotationZ, -90, 90);
 

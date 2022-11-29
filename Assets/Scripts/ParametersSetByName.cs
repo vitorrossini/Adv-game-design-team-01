@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class ParametersSetByName : MonoBehaviour
 {
-    public  FMOD.Studio.EventInstance Music;
+    public FMOD.Studio.EventInstance Music;
 
-   public  void Start()
+    public void Start()
     {
         Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
         Music.start();
     }
 
-   public void LevitatePiano1()
+    public void LevitatePiano(float track)
     {
-        Music.setParameterByName("Piano", 1f);
+        Music.setParameterByName("Piano", track);
     }
-   
+
     public void LevitatePiano2()
     {
         Music.setParameterByName("Piano", 2f);
@@ -28,6 +28,11 @@ public class ParametersSetByName : MonoBehaviour
     public void RotateDrums2()
     {
         Music.setParameterByName("Drums", 2f);
+    }
+
+    public void UseGuitar0()
+    {
+
     }
     
     public void UseGuitar1()

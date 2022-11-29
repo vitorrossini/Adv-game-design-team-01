@@ -26,7 +26,7 @@ public class MovePlatforms : MonoBehaviour
         if (Input.GetButton("Platform"))
         {
 
-            music.LevitatePiano1();
+            music.LevitatePiano(1f);
             transform.Translate(direction * speed * Time.deltaTime);
 
             if (transform.position.y <= (originalPos -limitDistance))
@@ -40,12 +40,11 @@ public class MovePlatforms : MonoBehaviour
         }
         else
         {
-            music.LevitatePiano2();
+            music.LevitatePiano(2f);
         }
     }
 
-
-   
+       
 
 
 }
