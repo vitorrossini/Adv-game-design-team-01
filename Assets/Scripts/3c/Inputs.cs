@@ -6,17 +6,33 @@ public class Inputs : MonoBehaviour
     [SerializeField] private GameObject wavePrefab;
     [SerializeField] private Transform playerPosition;
     public float timer;
+    public bool triggerrr;
 
+    private void Start()
+    {
+        triggerrr = false;
+    }
     void Update()
     {
         if (Input.GetButtonDown("Guitar"))
         {
+            TriggerTimer();
+
             
-            PlayGuitar();
             GameObject newWave = Instantiate(wavePrefab);
             newWave.transform.position = playerPosition.position;
         }
+
+        if (triggerrr)
+        {
+            PlayGuitar();
+        }
         
+    }
+
+    public void TriggerTimer()
+    {
+        triggerrr = true;
     }
 
     public void PlayGuitar()
@@ -31,6 +47,7 @@ public class Inputs : MonoBehaviour
         {
             music.UseGuitar2();
             timer = 0;
+            triggerrr = false;
         }
     }
 
