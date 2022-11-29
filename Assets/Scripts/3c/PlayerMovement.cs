@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             breakSpeed = 1f;
         }
 
-
+        CheckIfGrounded();
 
     }
 
@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Flip();
         rb2d.velocity = new Vector2(moveInput * moveSpeed * breakSpeed, rb2d.velocity.y);
+
     }
 
     public void Flip()
@@ -96,6 +97,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void CheckIfGrounded()
     {
+        RaycastHit hit;
+
+        
+       
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer); // change this so it doesnt change only when you collide again
         
         ResetJumps();

@@ -9070,7 +9070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455149775749314109, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: musicTransition
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8136673188963013921, guid: e7d5606dc9550074ca8bcc64d698a209, type: 3}
       propertyPath: Win
