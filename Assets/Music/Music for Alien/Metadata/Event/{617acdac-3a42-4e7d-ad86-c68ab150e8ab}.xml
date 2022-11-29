@@ -215,7 +215,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{875839d0-f698-4642-8767-d827527420b4}">
 		<property name="volume">
-			<value>-5</value>
+			<value>-8</value>
 		</property>
 		<property name="name">
 			<value>Background Synths</value>
@@ -711,7 +711,7 @@
 			<value>1.6000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{bfdd3db8-4b8e-4a91-b6c2-7e6af6ee40a8}">
@@ -765,7 +765,7 @@
 			<value>1.6000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-2</value>
+			<value>-5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4399d18f-643c-484d-b92a-6a7f5a5968e5}">
@@ -819,7 +819,7 @@
 			<value>1.6000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-5</value>
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1fe2a0f4-9e83-41a7-955c-11b640f00c3f}">
