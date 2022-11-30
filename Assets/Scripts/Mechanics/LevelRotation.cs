@@ -25,7 +25,7 @@ public class LevelRotation : MonoBehaviour
     {
         TurnIt();
         PlayDrums();
-        if(rotationZ >= -5f && rotationZ <= 5f)
+        if(rotationZ >= -2f && rotationZ <= 2f)
         {
             canMovePlatforms = true;
         }
