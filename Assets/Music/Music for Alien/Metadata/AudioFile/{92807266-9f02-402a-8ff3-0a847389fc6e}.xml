@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{92807266-9f02-402a-8ff3-0a847389fc6e}">
+		<property name="assetPath">
+			<value>394440__inspectorj__bamboo-swing-a7.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.80727891156462583</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a3bddbb3-2deb-4fa2-ba0b-de8a10298159}</destination>
+		</relationship>
+	</object>
+</objects>
