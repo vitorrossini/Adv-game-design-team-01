@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class MovePlatforms : MonoBehaviour
 {
+    private LevelRotation lvl;
+    [Header("Will it rotate with the level?")]
+    public bool willRotate;
+    
+    [Header("Music")]
+    public ParametersSetByName music;
     public float addValue = 1.2f;
     public float subtractValue = -1.2f;
     public bool play;
     public float musicTrack = 2f;
+    
+    [Header("Moving settings")]
+    [SerializeField] public float limitDistance = 2f;
     public float speed;
     float originalPos;
-    public ParametersSetByName music;
-    [SerializeField] public float limitDistance = 2f;
+    
+    
     
 
     // Start is called before the first frame update
@@ -19,6 +28,7 @@ public class MovePlatforms : MonoBehaviour
     {
         originalPos = transform.position.y;
         play = false;
+        //willRotate = false;
     }
 
     // Update is called once per frame
@@ -45,11 +55,20 @@ public class MovePlatforms : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, (originalPos + limitDistance) , transform.position.z);
             }
         }
+
+        if (willRotate)
+        {
+            Debug.LogWarning("Testing");
+                transform.rotation = Quaternion.Euler(Vector3.up);
+            
+        }
+        
         else
         {
             play = false;
             
         }
+        
     }
 
        void PlayPiano()

@@ -162,5 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402e8f7b9c2ad494ca7b8f76f63ce7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  willRotate: 1
+  music: {fileID: 0}
+  addValue: 1.2
+  subtractValue: -1.2
+  play: 1
+  musicTrack: 2
   limitDistance: 6
+  speed: 3
