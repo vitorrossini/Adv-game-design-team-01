@@ -9,6 +9,7 @@ public class LevelRotation : MonoBehaviour
     public float rotationZ;
     public float speed = 1f;
     public bool play;
+    public bool canMovePlatforms;
     private PlayerMovement movement;
    
 
@@ -17,12 +18,21 @@ public class LevelRotation : MonoBehaviour
         movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         rotationZ = gameObject.transform.rotation.z;
         play = false;
+        canMovePlatforms = false;
     }
     
     public void Update()
     {
         TurnIt();
         PlayDrums();
+        if(rotationZ >= -5f && rotationZ <= 5f)
+        {
+            canMovePlatforms = true;
+        }
+        else
+        {
+            canMovePlatforms = false;
+        }
     }
 
    
@@ -45,6 +55,7 @@ public class LevelRotation : MonoBehaviour
         else
         {
             play = false;
+            
         }
       
 

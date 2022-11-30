@@ -26,6 +26,7 @@ public class MovePlatforms : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lvl = GameObject.Find("Level").GetComponent<LevelRotation>();
         originalPos = transform.position.y;
         play = false;
         //willRotate = false;
@@ -34,12 +35,16 @@ public class MovePlatforms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         PlayPiano();
+        
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(0, verticalInput, 0);
+        
 
-        if (Input.GetButton("Platform"))
+        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms)
         {
             play = true;
 
@@ -64,13 +69,13 @@ public class MovePlatforms : MonoBehaviour
 
         if (willRotate)
         {
-            Debug.LogWarning("Testing");
-                transform.rotation = Quaternion.Euler(Vector3.up);
             
+            transform.rotation = Quaternion.Euler(Vector3.up);
+
         }
+
         
-        
-        
+
     }
 
     void PlayPiano()
@@ -101,5 +106,5 @@ public class MovePlatforms : MonoBehaviour
 
     }
 
-
+  
 }
