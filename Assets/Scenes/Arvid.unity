@@ -1346,8 +1346,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774ef22836f3d644aaae622106b0f5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addValue: 1.2
+  subtractValue: -1.2
+  musicTrack: 2
+  music: {fileID: 1911646430}
   rotationZ: 0
   speed: 60
+  play: 0
 --- !u!4 &1146631957
 Transform:
   m_ObjectHideFlags: 0
