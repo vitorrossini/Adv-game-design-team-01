@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1911646430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!1001 &23774580
@@ -235,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1911646430}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: speed
       value: 6
@@ -968,6 +976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1911646430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f202db77085661840974711dfa48d10d, type: 3}
 --- !u!4 &728468376 stripped
@@ -1030,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1911646430}
     - target: {fileID: 1866543794731340443, guid: f202db77085661840974711dfa48d10d, type: 3}
       propertyPath: speed
       value: 13

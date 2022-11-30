@@ -55,6 +55,12 @@ public class MovePlatforms : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, (originalPos + limitDistance) , transform.position.z);
             }
         }
+        
+        else
+        {
+            play = false;
+            
+        }
 
         if (willRotate)
         {
@@ -63,20 +69,17 @@ public class MovePlatforms : MonoBehaviour
             
         }
         
-        else
-        {
-            play = false;
-            
-        }
+        
         
     }
 
-       void PlayPiano()
+    void PlayPiano()
     {
         if (musicTrack <= 1f)
         {
             musicTrack = 1f;
         }
+
         if (musicTrack >= 2f)
         {
             musicTrack = 2f;
