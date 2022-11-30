@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class LevelRotation : MonoBehaviour
 {
+    public float addValue;
+    public float subtractValue;
+    public float musicTrack;
+    public ParametersSetByName music;
     public float rotationZ;
     public float speed = 1f;
+    public bool play;
     private PlayerMovement movement;
    
 
@@ -11,11 +16,13 @@ public class LevelRotation : MonoBehaviour
     {
         movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         rotationZ = gameObject.transform.rotation.z;
+        play = false;
     }
     
     public void Update()
     {
         TurnIt();
+        PlayDrums();
     }
 
    
@@ -23,7 +30,7 @@ public class LevelRotation : MonoBehaviour
     {
         if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
         {
-            
+            play = true;
             Debug.LogError("yeah you can turn");
 
 
@@ -35,12 +42,41 @@ public class LevelRotation : MonoBehaviour
 
 
         }
+        else
+        {
+            play = false;
+        }
       
 
     }
    
 
+   public void PlayDrums()
 
+   {
+       if (musicTrack <= 1f)
+       {
+           musicTrack = 1f;
+       }
+       if (musicTrack >= 2f)
+       {
+           musicTrack = 2f;
+       }
+
+       if (play)
+       {
+           musicTrack += subtractValue * Time.deltaTime;
+
+       }
+
+       else
+       {
+           musicTrack += addValue * Time.deltaTime;
+
+       }
+        
+       music.RotateDrums(musicTrack);
+   }
 
 
 
