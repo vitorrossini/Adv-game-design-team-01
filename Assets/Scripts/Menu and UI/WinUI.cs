@@ -11,11 +11,11 @@ public class WinUI : MonoBehaviour
 {
     
     public FMOD.Studio.EventInstance Music;
-    private String currentScene;
+    private int currentScene;
 
     private void Start()
     {
-        currentScene = SceneManager.GetActiveScene().name.ToString();
+        currentScene = SceneManager.GetActiveScene().buildIndex;
         Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
     }
 
@@ -30,6 +30,7 @@ public class WinUI : MonoBehaviour
         
         Time.timeScale = 1;
         gameObject.SetActive(false);
+        SceneManager.LoadScene(currentScene);
 
     }
 
@@ -43,6 +44,10 @@ public class WinUI : MonoBehaviour
     public void Reload()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(currentScene + 1);
+        if (currentScene +1 == null)
+        {
+            SceneManager.LoadScene(currentScene);
+        }
     }
 }
