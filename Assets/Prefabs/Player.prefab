@@ -148,15 +148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b88c47d01ef2c42be29fa67645435e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
   lvlRot: {fileID: 0}
-  moveSpeed: 8
+  moveSpeed: 6
   jumpForce: 8
   jumpsAmount: 1
   GroundCheck: {fileID: 8772114463795883041}
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isGrounded: 0
   onTurnPlat: 0
   moveInput: 0
 --- !u!114 &8772114462970170117
@@ -172,8 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 0}
+  musicTransition: 1
+  musicTrack: 2
   wavePrefab: {fileID: 7935897265600596552, guid: d650c6dbe8b8ddf4389dd2bc2e571dea, type: 3}
   playerPosition: {fileID: 8772114462970170121}
+  timer: 0
+  triggerrr: 0
+  drumStartLoop: 0
 --- !u!1 &8772114463795883040
 GameObject:
   m_ObjectHideFlags: 0
