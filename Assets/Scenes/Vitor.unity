@@ -4901,6 +4901,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11336c83cceb934291af5acb770d3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 1635437996
+      Data2: 1316829762
+      Data3: -1966700883
+      Data4: -1410838351
+    Path: event:/Music
 --- !u!4 &1673887857
 Transform:
   m_ObjectHideFlags: 0
