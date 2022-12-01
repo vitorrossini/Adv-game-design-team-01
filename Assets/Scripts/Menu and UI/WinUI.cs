@@ -9,14 +9,15 @@ using UnityEngine.SceneManagement;
 
 public class WinUI : MonoBehaviour
 {
-    
-    public FMOD.Studio.EventInstance Music;
-    private int currentScene;
 
+    private StudioEventEmitter music;
+    private int currentScene;
+ 
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
-        Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
+
+        music = GameObject.Find("Music").GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     private void Update()
@@ -26,8 +27,9 @@ public class WinUI : MonoBehaviour
 
     public void Resume()
     {
-        Music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        
+
+
+        music.Stop();
         Time.timeScale = 1;
         gameObject.SetActive(false);
         SceneManager.LoadScene(currentScene);
@@ -43,6 +45,7 @@ public class WinUI : MonoBehaviour
 
     public void Reload()
     {
+        music.Stop();
         Time.timeScale = 1;
         SceneManager.LoadScene(currentScene + 1);
         if (currentScene +1 == null)
