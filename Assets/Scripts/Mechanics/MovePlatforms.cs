@@ -20,14 +20,15 @@ public class MovePlatforms : MonoBehaviour
     [SerializeField] public float limitDistance = 2f;
     public float speed;
     float originalPos;
-    
-    
-    
+
+
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         lvl = GameObject.Find("Level").GetComponent<LevelRotation>();
+        animator = GameObject.Find("Player").GetComponent<Animator>();
         originalPos = transform.position.y;
         play = false;
         warning = GameObject.Find("Warning For Platforms").GetComponent<GameObject>();
@@ -48,6 +49,8 @@ public class MovePlatforms : MonoBehaviour
         if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms)
         {
             play = true;
+            animator.SetBool("piano", true);
+
 
             
             transform.Translate(direction * speed * Time.deltaTime);
@@ -65,7 +68,8 @@ public class MovePlatforms : MonoBehaviour
         else
         {
             play = false;
-            
+            animator.SetBool("piano", false);
+
         }
 
         if (willRotate)

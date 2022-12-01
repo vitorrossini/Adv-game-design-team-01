@@ -9,20 +9,29 @@ public class Inputs : MonoBehaviour
     [SerializeField] private Transform playerPosition;
     public float timer;
     public bool triggerrr;
+    private Animator animator;
+    public float drumStartLoop;
+
 
     private void Start()
     {
         triggerrr = false;
+        animator = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
         if (Input.GetButtonDown("Guitar"))
         {
             TriggerTimer();
-
+            animator.SetBool("guitar", true);
             
             GameObject newWave = Instantiate(wavePrefab);
             newWave.transform.position = playerPosition.position;
+        }
+        
+        else
+        {
+            animator.SetBool("guitar", false);
         }
 
         if (triggerrr)
@@ -52,6 +61,11 @@ public class Inputs : MonoBehaviour
             timer = 0;
             triggerrr = false;
         }
+    }
+
+    public void DrumsLoop()
+    {
+       animator.Play("DrumsLoop");
     }
 
 }

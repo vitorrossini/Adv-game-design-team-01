@@ -11,11 +11,13 @@ public class LevelRotation : MonoBehaviour
     public bool play;
     public bool canMovePlatforms;
     private PlayerMovement movement;
+    private Animator animator;
    
 
     public void Start()
     {
         movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        animator = GameObject.Find("Player").GetComponent<Animator>();
         rotationZ = gameObject.transform.rotation.z;
         play = false;
         canMovePlatforms = false;
@@ -41,6 +43,7 @@ public class LevelRotation : MonoBehaviour
         if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
         {
             play = true;
+            animator.SetBool("drums", true);
             
 
 
@@ -55,7 +58,8 @@ public class LevelRotation : MonoBehaviour
         else
         {
             play = false;
-            
+            animator.SetBool("drums", false);
+
         }
       
 
