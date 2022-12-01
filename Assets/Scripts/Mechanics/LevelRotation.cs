@@ -41,7 +41,7 @@ public class LevelRotation : MonoBehaviour
         if (Input.GetButton("Rotate") && movement.GetComponent<PlayerMovement>().onTurnPlat == true)
         {
             play = true;
-            Debug.LogError("yeah you can turn");
+            
 
 
             

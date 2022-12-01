@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
         {
             onTurnPlat = true;
        
-            Debug.LogError("woow");
+           
         }
         else
         {

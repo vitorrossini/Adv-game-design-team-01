@@ -15,7 +15,7 @@ public class Goal : MonoBehaviour
         
         if(collision.gameObject.layer == 7)
         {
-            Debug.LogError("Collided");
+            
             Time.timeScale = 0f;
             Win.SetActive(true);
             Music.stop(STOP_MODE.IMMEDIATE);
