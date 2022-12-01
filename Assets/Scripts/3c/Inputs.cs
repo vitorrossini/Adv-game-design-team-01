@@ -63,9 +63,6 @@ public class Inputs : MonoBehaviour
         }
     }
 
-    public void DrumsLoop()
-    {
-       animator.Play("DrumsLoop");
-    }
+  
 
 }
