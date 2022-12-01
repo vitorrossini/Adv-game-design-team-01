@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovePlatforms : MonoBehaviour
 {
+    [SerializeField] private GameObject warning;
     private LevelRotation lvl;
     [Header("Will it rotate with the level?")]
     public bool willRotate;
@@ -29,7 +30,7 @@ public class MovePlatforms : MonoBehaviour
         lvl = GameObject.Find("Level").GetComponent<LevelRotation>();
         originalPos = transform.position.y;
         play = false;
-        //willRotate = false;
+        warning = GameObject.Find("Warning For Platforms").GetComponent<GameObject>();
     }
 
     // Update is called once per frame
@@ -72,6 +73,16 @@ public class MovePlatforms : MonoBehaviour
             
             transform.rotation = Quaternion.Euler(Vector3.up);
 
+        }
+
+        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms == false)
+        {
+            warning.SetActive(true);
+
+        }
+        else
+        {
+            warning.SetActive(false);
         }
 
         

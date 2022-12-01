@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402e8f7b9c2ad494ca7b8f76f63ce7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  warning: {fileID: 7473846123188487346, guid: e2008f657a8f92e4681a7e4b2206e620, type: 3}
   willRotate: 1
   music: {fileID: 0}
   addValue: 1.2
