@@ -82,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            CheckIfGrounded();
-            if (jumpsLeft > 0)
+            
+            if (isGrounded && jumpsLeft > 0)
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
-                jumpsLeft--;
+                jumpsLeft --;
             }
 
         }
@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            jumpsLeft = jumpsAmount;// jumpsAmount =2;
+            jumpsLeft = jumpsAmount;
         }
     }
 

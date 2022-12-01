@@ -9,8 +9,8 @@ public class ParametersSetByName : MonoBehaviour
 
     public void Start()
     {
-        Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
-        Music.start();
+       Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
+       Music.start();
         win = gameObject.GetComponent<WinUI>();
     }
 
