@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146cd693e88c2c14fa6c3c3ac3b09ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reload: 0
+  reload2: 0
 --- !u!114 &7999651782755847686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1847057519979404891}
   pauseFirstButton: {fileID: 2106184065089981819}
+  retried: 0
 --- !u!1001 &2784646850055764150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,14 +473,14 @@ PrefabInstance:
     - target: {fileID: 1768809917980120623, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2076731245703121593}
+      objectReference: {fileID: 7999651782755847686}
     - target: {fileID: 1768809917980120623, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
+      value: Retry
       objectReference: {fileID: 0}
     - target: {fileID: 1768809917980120623, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WinUI, Assembly-CSharp
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2646957344611180044, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_text
@@ -686,6 +689,12 @@ PrefabInstance:
     - target: {fileID: 6716772947609072546, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900617052505883273, guid: d842bdc17a163e547848ff54864160a6, type: 3}
+      propertyPath: m_text
+      value: 'Retry
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6900617052505883273, guid: d842bdc17a163e547848ff54864160a6, type: 3}
       propertyPath: m_sharedMaterial

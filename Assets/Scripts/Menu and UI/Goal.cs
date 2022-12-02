@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Goal : MonoBehaviour
 {
-    public FMOD.Studio.EventInstance Music;
    [SerializeField] public GameObject Win;
     public GameObject againButton;
+    public bool win = false;
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,9 +18,13 @@ public class Goal : MonoBehaviour
             
             Time.timeScale = 0f;
             Win.SetActive(true);
-            Music.stop(STOP_MODE.IMMEDIATE);
+            win = true;
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(againButton);
+        }
+        else
+        {
+            win = false;
         }
     }
 }

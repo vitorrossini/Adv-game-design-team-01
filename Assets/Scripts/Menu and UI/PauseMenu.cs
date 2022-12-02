@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject pauseFirstButton;
-    
+    private int currentScene;
+    public bool retried;
 
-
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        retried = false;
+    }
 
     void Update()
     {
@@ -50,6 +56,16 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
 
 
+
+    }
+
+    public void Retry()
+    {
+
+        retried = true;
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
+        SceneManager.LoadScene(currentScene);
 
     }
 

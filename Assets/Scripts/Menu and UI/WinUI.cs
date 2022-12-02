@@ -10,33 +10,33 @@ using UnityEngine.SceneManagement;
 public class WinUI : MonoBehaviour
 {
 
-    private StudioEventEmitter music;
+    
     private int currentScene;
- 
+    public bool reload = false;
+    public bool reload2 = false;
+
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
-
-        music = GameObject.Find("Music").GetComponent<FMODUnity.StudioEventEmitter>();
+        reload = false;
+       
     }
 
     private void Update()
     {
+        if(reload)
+        {
+            Debug.LogWarning("reload on WinUI");
+            reload2 = true;
+        }
+        else
+        {
+            reload2 = false;
+        }
         
     }
 
-    public void Resume()
-    {
-
-
-        music.Stop();
-        Time.timeScale = 1;
-        gameObject.SetActive(false);
-        SceneManager.LoadScene(currentScene);
-
-    }
-
-   
+      
 
     public void QuitButton()
     {
@@ -45,7 +45,7 @@ public class WinUI : MonoBehaviour
 
     public void Reload()
     {
-        music.Stop();
+        
         Time.timeScale = 1;
         SceneManager.LoadScene(currentScene + 1);
         if (currentScene +1 == null)

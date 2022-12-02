@@ -5,18 +5,26 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 public class ParametersSetByName : MonoBehaviour
 {
     public FMOD.Studio.EventInstance Music;
-    private WinUI win;
+    private PauseMenu retry;
+    private Goal goal;
 
     public void Start()
     {
        Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
        Music.start();
-        win = gameObject.GetComponent<WinUI>();
+        retry = GameObject.Find("Menu").GetComponent<PauseMenu>();
+        goal = GameObject.Find("FinalButton").GetComponent<Goal>();
     }
 
     private void Update()
     {
-        
+        if (goal.win || retry.retried)
+
+        {
+            Debug.LogWarning("should work");
+            Music.release();
+            Music.stop(STOP_MODE.IMMEDIATE);
+        }
     }
 
     public void LevitatePiano(float track)
