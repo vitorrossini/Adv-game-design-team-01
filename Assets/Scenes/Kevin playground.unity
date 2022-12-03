@@ -11000,6 +11000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5829623007711832552, guid: 8132265419a860a4c91c9d75ca3f04d9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8132265419a860a4c91c9d75ca3f04d9, type: 3}
 --- !u!4 &1591959841 stripped
@@ -11521,6 +11525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Win: {fileID: 4224200310368647881}
   againButton: {fileID: 1889391728}
+  win: 0
 --- !u!58 &1899015534
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12214,6 +12219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5829623007711832552, guid: 8132265419a860a4c91c9d75ca3f04d9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8132265419a860a4c91c9d75ca3f04d9, type: 3}
 --- !u!4 &5829623009166986514 stripped
@@ -12255,7 +12264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6494064158213941712, guid: 303f68b5a24d4034bafd39968cb03846, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.956625
+      value: -15.954444
       objectReference: {fileID: 0}
     - target: {fileID: 6494064158213941712, guid: 303f68b5a24d4034bafd39968cb03846, type: 3}
       propertyPath: m_LocalPosition.y

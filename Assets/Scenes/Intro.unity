@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 645519887}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &721847137
@@ -1931,6 +1931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146cd693e88c2c14fa6c3c3ac3b09ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reload: 0
+  reload2: 0
 --- !u!114 &954182795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,6 +1947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 954182793}
   pauseFirstButton: {fileID: 645519887}
+  retried: 0
 --- !u!114 &954182796
 MonoBehaviour:
   m_ObjectHideFlags: 0
