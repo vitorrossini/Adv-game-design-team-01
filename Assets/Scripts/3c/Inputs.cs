@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Inputs : MonoBehaviour
 {
+
+    // Was supposed to be the script with all the inputs, but i couldnt manage to make it in time.
+    // This script deals with the input of the guitar (button activation), where it instantiates a collider to destroy the doors. It should last for 1 sec and plays the animation and new sound for 2 seconds, there after that it can be triggered again
+
     public ParametersSetByName music;
     public float musicTransition = 1f;
     public float musicTrack = 2f;
@@ -22,11 +26,11 @@ public class Inputs : MonoBehaviour
     {
         if (Input.GetButtonDown("Guitar"))
         {
-            TriggerTimer();
+            TriggerTimer(); // starts a method that activates the timer
             animator.SetBool("guitar", true);
             
-            GameObject newWave = Instantiate(wavePrefab);
-            newWave.transform.position = playerPosition.position;
+            GameObject newWave = Instantiate(wavePrefab); // creates the prefab in game (the guitar collider)
+            newWave.transform.position = playerPosition.position; // the position its created is where the player is
         }
         
         else

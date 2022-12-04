@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    // movement and jump script, also useful to check where it stands
+
     public LevelRotation lvlRot;
     public float moveSpeed;
     private float breakSpeed;
@@ -38,17 +41,17 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         Jump();
 
-        if (onTurnPlat && Input.GetButton("Rotate"))
+        if (onTurnPlat && Input.GetButton("Rotate")) // if you are on the rotating platform and you are pressing the button to rotate the level
         {
 
-            breakSpeed = 0;
+            breakSpeed = 0; // doesnt let the player move
         }
         else
         {
-            breakSpeed = 1f;
+            breakSpeed = 1f; // goes back to normal
         }
 
-        CheckIfGrounded();
+        CheckIfGrounded(); // always checks if its standing somewhere or else it would change the behaviour of the sound and the level rotation
         
 
     }
@@ -61,11 +64,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         Flip();
-        rb2d.velocity = new Vector2(moveInput * moveSpeed * breakSpeed, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(moveInput * moveSpeed * breakSpeed, rb2d.velocity.y); // i feel like i could work on this better
 
     }
 
-    public void Flip()
+    public void Flip() // flip the sprites and animations as you move to the other side
     {
         if (moveInput > 0)
         {
@@ -83,10 +86,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             
-            if (isGrounded && jumpsLeft > 0)
+            if (isGrounded && jumpsLeft > 0) // check the amount of jumps
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
-                jumpsLeft --;
+                jumpsLeft --; // decrease one
             }
 
         }
@@ -99,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
         
        
-        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer); // change this so it doesnt change only when you collide again
+        isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer); // checks the ground based on the circle collider attached to an empty object below the player
         
         ResetJumps();
     }
@@ -114,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("CanTurn"))
+        if (collision.gameObject.CompareTag("CanTurn")) // checks if the player is standing on the platform that allows level rotation
         {
             onTurnPlat = true;
        

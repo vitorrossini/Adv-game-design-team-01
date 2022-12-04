@@ -11917,6 +11917,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.6039216
       objectReference: {fileID: 0}
+    - target: {fileID: 2342244189422238169, guid: d2a95c94d87f5d748bd00a46e1adfaee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3394350826810844652, guid: d2a95c94d87f5d748bd00a46e1adfaee, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -65.3

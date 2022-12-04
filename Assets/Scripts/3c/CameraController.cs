@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+
+    // Script was supposed to follow the player but i ended up using cinemachine
+
+
     public GameObject player;
     public float offset;
     public float offsetSmoothing;

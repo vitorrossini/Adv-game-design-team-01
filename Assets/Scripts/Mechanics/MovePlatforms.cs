@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MovePlatforms : MonoBehaviour
 {
+
+    // Script that allows platforms being moved vertically by the player under certain conditions.
+
     [SerializeField] private GameObject warning;
     private LevelRotation lvl;
     [Header("Will it rotate with the level?")]
@@ -29,7 +32,7 @@ public class MovePlatforms : MonoBehaviour
     {
         lvl = GameObject.Find("Level").GetComponent<LevelRotation>();
         animator = GameObject.Find("Player").GetComponent<Animator>();
-        originalPos = transform.position.y;
+        originalPos = transform.position.y;  // position where the platform is set when the game starts
         play = false;
         warning = GameObject.Find("Warning For Platforms").GetComponent<GameObject>();
     }
@@ -41,27 +44,27 @@ public class MovePlatforms : MonoBehaviour
         
         PlayPiano();
         
-        float verticalInput = Input.GetAxis("Vertical");
+        float verticalInput = Input.GetAxis("Vertical"); // reads the vertical input
 
-        Vector3 direction = new Vector3(0, verticalInput, 0);
+        Vector3 direction = new Vector3(0, verticalInput, 0); // Adress the vertical input as the direction we want the platform to move (x direction)
         
 
-        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms)
+        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms) // if the button is pressed and you can move it
         {
             play = true;
             animator.SetBool("piano", true);
 
 
             
-            transform.Translate(direction * speed * Time.deltaTime);
+            transform.Translate(direction * speed * Time.deltaTime); // moves the platform gradually in the direction and speed determined
 
-            if (transform.position.y <= (originalPos -limitDistance))
+            if (transform.position.y <= (originalPos -limitDistance)) // if the platform reached the max distance down
             {
-                transform.position = new Vector3(transform.position.x, (originalPos - limitDistance) , transform.position.z);
+                transform.position = new Vector3(transform.position.x, (originalPos - limitDistance) , transform.position.z); // it remains on that limit
             }
-            else if (transform.position.y >= (originalPos + limitDistance))
+            else if (transform.position.y >= (originalPos + limitDistance)) // if the platform reaches the max distance up
             {
-                transform.position = new Vector3(transform.position.x, (originalPos + limitDistance) , transform.position.z);
+                transform.position = new Vector3(transform.position.x, (originalPos + limitDistance) , transform.position.z); // it remains on that limit
             }
         }
         
@@ -75,13 +78,13 @@ public class MovePlatforms : MonoBehaviour
         if (willRotate)
         {
             
-            transform.rotation = Quaternion.Euler(Vector3.up);
+            transform.rotation = Quaternion.Euler(Vector3.up); // Keeps its side up after rotating the level (Thanks Arthur)
 
         }
 
-        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms == false)
+        if (Input.GetButton("Platform") && lvl.GetComponent<LevelRotation>().canMovePlatforms == false) // if you are pressing the move platform button but doesnt reach the conditions to move the platforms
         {
-            warning.SetActive(true);
+            warning.SetActive(true); // warning UI shows up
 
         }
         else
