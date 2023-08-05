@@ -34,7 +34,7 @@ public class MovePlatforms : MonoBehaviour
         animator = GameObject.Find("Player").GetComponent<Animator>();
         originalPos = transform.position.y;  // position where the platform is set when the game starts
         play = false;
-        warning = GameObject.Find("Warning For Platforms").GetComponent<GameObject>();
+        warning = GameObject.Find("WarningPlats").GetComponent<GameObject>();
     }
 
     // Update is called once per frame

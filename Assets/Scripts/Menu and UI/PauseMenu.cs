@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -10,12 +7,11 @@ public class PauseMenu : MonoBehaviour
     // Pause menu script should only work in game. I still need to check how it behaves on the Main menu
 
     public static bool gameIsPaused = false;
-
-    public GameObject pauseMenuUI;
-    public GameObject pauseFirstButton;
-    private int currentScene;
     public bool retried;
-
+    public GameObject pauseMenuUI;
+   // public GameObject pauseFirstButton;
+    private int currentScene;
+    
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex; // gets the index of the current level / scene.
@@ -49,14 +45,14 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
         Cursor.visible = true;
-        EventSystem.current.SetSelectedGameObject(null);  // Same as in the goal script. Clears the default button to be selected so i can chose which one i want to be the first
-        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+      //  EventSystem.current.SetSelectedGameObject(null);  // Same as in the goal script. Clears the default button to be selected so i can chose which one i want to be the first
+       // EventSystem.current.SetSelectedGameObject(pauseFirstButton);
 
 
 

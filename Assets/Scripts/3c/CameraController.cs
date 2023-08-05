@@ -13,13 +13,13 @@ public class CameraController : MonoBehaviour
     public float offsetSmoothing;
     private Vector3 playerPosition;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         playerPosition = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);

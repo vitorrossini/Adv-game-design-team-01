@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,7 +18,7 @@ public class WinUI : MonoBehaviour
        
     }
 
-    private void Update()   // i wish i could remeber the logic behind this. I think another script checks the "reload2" bool and i had to create this one to make it work on this script? 
+    private void Update()   // i wish i could remember the logic behind this. I think another script checks the "reload2" bool and i had to create this one to make it work on this script? 
     {
         if(reload)
         {
@@ -46,10 +42,7 @@ public class WinUI : MonoBehaviour
     {
         
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentScene + 1);
-        if (currentScene +1 == null)  // tried to make it reload the last scene over and over again but failed. Can work on that later one either figuring out how to make it or just making an end UI
-        {
-            SceneManager.LoadScene(currentScene);
-        }
+        
+        SceneManager.LoadScene(1);
     }
 }
